@@ -1,0 +1,6 @@
+{
+  "application": {
+    "name": "frontend",
+    "type": "ruby"
+  }
+}
