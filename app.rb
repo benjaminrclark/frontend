@@ -16,7 +16,7 @@ set :logging, true
     else
       puts "Service is UP"
       backend_response = Typhoeus.get("http://#{backend.Address}:#{backend.ServicePort}/")
-      response = {:service => "UP", :response_status => backend_response.status_code} 
+      response = {:service => "UP", :response_status => backend_response.response_code} 
       if backend_response.success? 
         message = JSON.parse(backend_response.response_body)
         response.merge(message)
